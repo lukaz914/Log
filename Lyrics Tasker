@@ -1,0 +1,69 @@
+20211212 12.06.31 E Stop     ID0:0.0  TaskService
+20211212 12.07.27 P Instant  ID51     Notification Click Show Lyrics
+20211212 12.07.27 E Start    ID0:0.0  TaskService
+20211212 12.07.27 P Instant  ID51     Notification Click Show Lyrics
+20211212 12.07.27 T Running  ID47     Show Full Lyrics Scene
+20211212 12.07.27 T RejCopy  ID47     Show Full Lyrics Scene
+20211212 12.07.27 A OK       ID47.1   Show Full Lyrics Scene.Status Bar
+20211212 12.07.28 A OK       ID47.2   Show Full Lyrics Scene.Show Scene
+20211212 12.07.28 T ExitOK   ID47     Show Full Lyrics Scene
+20211212 12.07.28 E Stop     ID0:0.0  TaskService
+20211212 12.07.30 P Instant  ID51     Notification Click Show Lyrics
+20211212 12.07.30 E Start    ID0:0.0  TaskService
+20211212 12.07.30 T Running  ID47     Show Full Lyrics Scene
+20211212 12.07.30 A OK       ID47.1   Show Full Lyrics Scene.Status Bar
+20211212 12.07.30 A Err      ID47.2   Show Full Lyrics Scene.Show Scene
+20211212 12.07.30 T ExitErr  ID47     Show Full Lyrics Scene
+20211212 12.07.30 E Stop     ID0:0.0  TaskService
+20211212 12.07.46 P Instant  ID52     Auto Lyrics
+20211212 12.07.46 E Start    ID0:0.0  TaskService
+20211212 12.07.46 T Running  ID48     Lyrics Current Playing Track
+20211212 12.07.46 A OK       ID48.1   Lyrics Current Playing Track.If
+20211212 12.07.46 A OK       ID48.2   Lyrics Current Playing Track.Var Clear, %LyricsData=%LyricsData
+20211212 12.07.46 A OK       ID48.3   Lyrics Current Playing Track.Removes notification on track change
+20211212 12.07.46 A IfFail   ID48.4   Lyrics Current Playing Track.Handles long tracks like podcasts, don't get lyrics for them
+20211212 12.07.46 T Running  ID49:2   Get Lyrics From Genius
+20211212 12.07.46 A OK       ID48.5   Lyrics Current Playing Track.Perform Task, Get Lyrics From Genius
+20211212 12.07.46 T ExitOK   ID48     Lyrics Current Playing Track
+20211212 12.07.46 A OK       ID49:2.1 Get Lyrics From Genius.Clear error to avoid triggering
+20211212 12.07.46 A IfFail   ID49:2.2 Get Lyrics From Genius.FOR TESTING ONLY
+20211212 12.07.46 A OK       ID49:2.3 Get Lyrics From Genius.Multiple Vars Set
+20211212 12.07.46 A OK       ID49:2.4 Get Lyrics From Genius.Handle dashes and brackets
+20211212 12.07.46 A OK       ID49:2.5 Get Lyrics From Genius.Var Set, %NotificationTrackName=I Will Be Back One..
+20211212 12.07.46 A OK       ID49:2.6 Get Lyrics From Genius.Remove first space, zero width space, last space, non character symbols and double spaces
+20211212 12.07.46 A OK       ID49:2.7 Get Lyrics From Genius.Var Set, %TrackArtist=Lord Huron
+20211212 12.07.46 A OK       ID49:2.8 Get Lyrics From Genius.Var Set, %full_track=Lord Huron I Will ..
+20211212 12.07.46 A OK       ID49:2.9 Get Lyrics From Genius.Check if lyrics saved
+20211212 12.07.46 A OK       ID49:2.10 Get Lyrics From Genius.If lyrics file doesn't exist
+20211212 12.07.46 A OK       ID49:2.11 Get Lyrics From Genius.Check if exceptions file exists
+20211212 12.07.46 A OK       ID49:2.12 Get Lyrics From Genius.If
+20211212 12.07.46 A OK       ID49:2.40 Get Lyrics From Genius.Else
+20211212 12.07.46 A OK       ID49:2.41 Get Lyrics From Genius.Goto
+20211212 12.07.46 A OK       ID49:2.20 Get Lyrics From Genius.Search song lyrics Genius API
+20211212 12.07.48 A OK       ID49:2.21 Get Lyrics From Genius.Song name returned by Genius
+20211212 12.07.48 A OK       ID49:2.22 Get Lyrics From Genius.Var Set, %notification_track=I Will Be Back One..
+20211212 12.07.48 A OK       ID49:2.23 Get Lyrics From Genius.Remove last space and zero width space from genius result
+20211212 12.07.48 A OK       ID49:2.24 Get Lyrics From Genius.Var Set, %clean_track_name=I Will Be Back One..
+20211212 12.07.48 A OK       ID49:2.25 Get Lyrics From Genius.Simple Match/Regex
+20211212 12.07.48 A Disabled ID49:2.26 Get Lyrics From Genius.FOR TESTING ONLY
+20211212 12.07.48 A OK       ID49:2.27 Get Lyrics From Genius.If
+20211212 12.07.48 A OK       ID49:2.29 Get Lyrics From Genius.Else
+20211212 12.07.48 A OK       ID49:2.30 Get Lyrics From Genius.Get lyrics page with headers for correct parsing
+20211212 12.07.48 A OK       ID49:2.31 Get Lyrics From Genius.JavaScriptlet
+20211212 12.07.48 A OK       ID49:2.32 Get Lyrics From Genius.If
+20211212 12.07.48 A OK       ID49:2.33 Get Lyrics From Genius.Write File
+20211212 12.07.48 A OK       ID49:2.34 Get Lyrics From Genius.Show lyrics notification
+20211212 12.07.48 A OK       ID49:2.35 Get Lyrics From Genius.Else
+20211212 12.07.48 A OK       ID49:2.38 Get Lyrics From Genius.End If
+20211212 12.07.48 A OK       ID49:2.39 Get Lyrics From Genius.End If
+20211212 12.07.48 A OK       ID49:2.40 Get Lyrics From Genius.Else
+20211212 12.07.48 A OK       ID49:2.43 Get Lyrics From Genius.Else
+20211212 12.07.48 T ExitOK   ID49:2   Get Lyrics From Genius
+20211212 12.07.48 E Stop     ID0:0.0  TaskService
+20211212 12.07.57 P Instant  ID51     Notification Click Show Lyrics
+20211212 12.07.57 E Start    ID0:0.0  TaskService
+20211212 12.07.57 T Running  ID47     Show Full Lyrics Scene
+20211212 12.07.57 A OK       ID47.1   Show Full Lyrics Scene.Status Bar
+20211212 12.07.57 A OK       ID47.2   Show Full Lyrics Scene.Show Scene
+20211212 12.07.57 T ExitOK   ID47     Show Full Lyrics Scene
+20211212 12.07.57 E Stop     ID0:0.0  TaskService
